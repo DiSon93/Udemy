@@ -1,0 +1,45 @@
+.UdemyCarousel {
+    @include background("/img/cover.jpg");
+    background-size: cover;
+    height: 600px;
+}
+.carousel__content {
+    padding: $pd-2 + 120px $pd-2 + 80px;
+}
+.carousel__content h1 {
+    font-size: $fs-4;
+    font-weight: $fw-bold-1;
+    line-height: 1.33;
+    color: $color-white-0;
+}
+.carousel__content p {
+    font-size: $fs-0 + 3;
+    color: $color-white-0;
+}
+form .input-group .form-control {
+    border-color: transparent;
+    border-radius: 0;
+    border: none;
+
+    height: 50px;
+    padding: 11px 17px;
+
+    @include styleText(#29303b, $fs-2, 100);
+    &:focus {
+        box-shadow: none;
+    }
+}
+#basic-addon2 {
+    @include styleText($color-red-0, $fs-1, 100);
+    background-color: $color-white-0;
+    box-shadow: none;
+    border-radius: 0;
+    &:hover {
+        @include styleHoverButton($color-red-0, $color-red-0, $color-white-0);
+    }
+}
+@include responsive("extra-large") {
+    .UdemyCarousel {
+        background-position: center;
+    }
+}

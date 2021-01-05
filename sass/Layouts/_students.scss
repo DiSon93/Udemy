@@ -1,0 +1,47 @@
+@media (min-width: 992px){
+
+   
+    .student__comment{
+    font-size: 19px;
+    font-weight: 200;
+    line-height: 1.47em;
+    color: #505763;
+}
+}
+.students{
+    margin: 20px 0;
+    .item{
+        border: 1px solid $color-gray-1;
+        box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    }
+    .item__content{
+        padding: 15px 10px 15px 15px;
+        h5{
+            @include styleText($color-black-0,$fs-1 + 2,$fw-bold-1);
+        }
+        p{
+            @include styleText($color-black-light,$fs-1 - 1,$fw-bold-0 - 200);
+        }
+        i{
+            color: #f4c150;
+            font-size: 13px;
+        }
+        .rate1{
+            @include styleText($color-black-0,$fs-1,$fw-bold-1);
+        }
+        .rate2{
+            @include styleText($color-black-light,$fs-1 - 1,$fw-bold-0 - 200);
+        }
+        .program__price{
+            padding: 15px 10px 0 15px!important;
+            text-align: right;
+            .old__price{
+                text-decoration: line-through;
+                @include styleText($color-black-light,$fs-1 - 1,$fw-bold-0 - 200);
+            }
+            .new__price{
+                @include styleText($color-black-0, $fs-2 - 2,$fw-bold-1);
+            }
+        }
+    }   
+}

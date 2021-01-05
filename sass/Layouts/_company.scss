@@ -1,0 +1,84 @@
+.companies{
+    background-color: $color-gray-1;
+    .company__clients{
+        p{
+            @include styleText($color-black-0,$fs-1,$fw-bold-0 - 200);
+            text-align: center;
+            padding-top: 16px;
+
+        }
+        .logo{
+            // display: flex;
+            // justify-content: space-between;
+            width: 100%;
+            // margin: 0 auto;
+            list-style: none;
+            font-size: 24px;
+            a{
+                float: left;
+                width: 16%;
+                text-align: center;
+                color: $color-gray-2;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            @include responsive('extra-large'){
+                a{
+                    
+                    width: 30%!important;
+                    // font-size: 16px;
+                }
+            }
+            @include responsive( 'medium'){
+                a{
+                    
+                    // width: 30%!important;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .company__udemy{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        .udemy__task{
+            width: 50%;
+            text-align: center;
+            padding: 28px 30px;
+            h3{
+                @include styleText($color-black-0,$fs-2 - 1,$fw-bold-1);
+                line-height: 1.47em;
+            }
+            p{
+                @include styleText($color-black-0,$fs-0 + 1,$fw-bold-0 - 200);
+                padding: 3px 100px 0;
+            }
+            button{
+                @include styleButton($color-red-0,$color-red-0,5px,11px,12px);
+                color: $color-white-0;
+                text-align: center;
+                &:hover{
+                    @include styleHoverButton($color-red-1,$color-red-1,$color-white-0);
+                }
+            }
+        }
+        @include responsive('extra-large'){
+            p{
+                padding: 0px!important;
+            }
+           
+        }
+        @include responsive('small'){
+            .udemy__task{
+                padding: 0;
+            }
+            button{
+                font-size: 13px;
+                padding: 5px 6px !important;
+             }
+        }
+    }
+}

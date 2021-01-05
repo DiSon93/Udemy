@@ -1,0 +1,31 @@
+.feedback{
+    background-color: $color-gray-1;
+    padding: 30px 0;
+    .feedback__quote{
+        h2{
+            @include styleText($color-black-0,$fs-3,$fw-bold-1);
+            line-height: 1.33em;
+            margin-bottom: 20px;
+        }
+    }
+    .feedback__comment{
+        background-color: $color-white-0;
+        height: 250px;
+        padding: 32px;
+        .feedback__name{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            img{
+                width: 62px;
+                border-radius: 50%;
+            }
+        }
+        .feedback__talk{
+            p{
+                @include styleText($color-black-0,$fs-0 + 1,$fw-bold-0 - 200);
+                line-height: 1.5em;
+            }
+        }
+    }
+}
